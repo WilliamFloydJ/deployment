@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(240, 247, 184);
+  text-align: center;
+  font-family: Lucida Console, monospace;
+}
+header {
+  font-family: Jazz Let, fantasy;
+  background-color: rgb(255, 201, 134);
+  font-size: 200%;
+  color: rgb(78, 0, 0);
+  filter: drop-shadow(5px 4px 2px #000000);
+}
+header h1 {
+  text-shadow: 5px 4px 2px rgb(255, 87, 87);
+}
+header h3 {
+  text-shadow: 5px 4px 2px rgb(255, 87, 87);
+}
+.imgDiv {
+  justify-content: center;
+  background-color: bisque;
+  display: flex;
+}
+#SmallImg {
+  width: 200px;
+  height: 200px;
+}
+#MediumImg {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+.imgDiv p {
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+  background-color: rgba(255, 254, 168, 0.473);
+}
+#EndArticleP {
+  padding: 5px;
+  font-size: 40px;
+  background-color: rgb(255, 201, 134);
+  color: rgb(78, 0, 0);
+  text-shadow: 2px 2px 2px rgb(255, 87, 87);
+  filter: drop-shadow(5px 4px 2px #000000);
+}
+article {
+  display: inline;
+}
+img {
+  border-radius: 2.5%;
+}
+footer {
+  background-color: rgb(255, 201, 134);
+  height: 10vh;
+  width: 99vw;
+}

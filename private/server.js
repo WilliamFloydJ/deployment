@@ -1,17 +1,14 @@
-const path = require("path");
 const express = require("express");
+const path = require("path");
+
 const app = express();
 
-console.log("Its a doing somethin");
-
-app.get("/", (req, res) => {
-  const htmlFilePath = path.resolve(__dirname, "public/index.html");
-
-  res.sendFile(htmlFilePath);
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 
-const PORT = 4025;
+const port = process.env.PORT || 4005;
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}/`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });

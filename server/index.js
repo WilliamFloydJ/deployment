@@ -15,10 +15,6 @@ app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../Public/main.css"));
 });
 
-app.get(
-  "/img/:id",
-  express.static(res.sendFile(path.join(__dirname, "../Public/Images/:id")))
-);
 const port = process.env.PORT || 4005;
 
 app.listen(port, () => {

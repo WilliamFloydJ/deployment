@@ -2,9 +2,9 @@
   "name": "deployment",
   "version": "1.0.0",
   "description": "",
-  "main": "private/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node private/server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",

@@ -16,7 +16,7 @@ app.get("/css", (req, res) => {
 });
 
 app.get("/img", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Public/Images/"));
+  res.sendFile(path.join(__dirname, "../Public/Images/Boy1"));
 });
 const port = process.env.PORT || 4005;
 

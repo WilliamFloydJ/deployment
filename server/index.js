@@ -3,8 +3,6 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static("Public"));
-
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../Public/index.html"));
 });
@@ -17,9 +15,10 @@ app.get("/css", (req, res) => {
   res.sendFile(path.join(__dirname, "../Public/main.css"));
 });
 
-app.get("/img", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Public/Images"));
-});
+app.get(
+  "/img/:id",
+  express.static(res.sendFile(path.join(__dirname, "../Public/Images/:id")))
+);
 const port = process.env.PORT || 4005;
 
 app.listen(port, () => {

@@ -3,7 +3,7 @@ const path = require("path");
 
 const app = express();
 
-app.use("/public", express.static("../Public"));
+app.use("/public", express.static(path.join(__dirname, "../Public/")));
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../Public/index.html"));

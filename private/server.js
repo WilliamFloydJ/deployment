@@ -1,7 +1,3 @@
-require("dotenv").config();
-
-const { PORT, NODE_ENV } = process.env;
-
 const path = require("path");
 const express = require("express");
 const app = express();
@@ -9,15 +5,13 @@ const app = express();
 console.log("Its a doing somethin");
 
 app.get("/", (req, res) => {
-  const htmlFilePath = path.resolve(__dirname, "/public/index.html");
+  const htmlFilePath = path.resolve(__dirname, "public/index.html");
 
   res.sendFile(htmlFilePath);
 });
 
+const PORT = 4025;
+
 app.listen(PORT, () => {
-  if (NODE_ENV === "development") {
-    console.log(`Server running on http://localhost:${PORT}/`);
-  } else {
-    console.log(`Server running on port ${PORT}`);
-  }
+  console.log(`Server running on http://localhost:${PORT}/`);
 });

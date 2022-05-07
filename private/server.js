@@ -6,8 +6,8 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-app.get("*", (req, res) => {
-  const htmlFilePath = path.resolve(__dirname, "..", "client", "index.html");
+app.get("/", (req, res) => {
+  const htmlFilePath = path.resolve(__dirname, "/public/index.html");
 
   res.sendFile(htmlFilePath);
 });
